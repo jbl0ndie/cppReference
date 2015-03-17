@@ -195,15 +195,15 @@ Error message and password prompt
 
 <li>expression</li>
 
-<li>for</li>
+<li>for loop</li>
 
 <li>function</li>
-
-<li>functions</li>
 
 <li>glossary</li>
 
 <li>Glossary of Terms</li>
+
+<li>growing a vector</li>
 
 <li>header</li>
 
@@ -223,9 +223,15 @@ Error message and password prompt
 
 <li>literal</li>
 
+<li>loop</li>
+
+<li>Loops</li>
+
 <li>lval</li>
 
 <li>main()</li>
+
+<li>member function call</li>
 
 <li>modulo</li>
 
@@ -245,6 +251,8 @@ Error message and password prompt
 
 <li>range-for-loop</li>
 
+<li>Rules</li>
+
 <li>rules</li>
 
 <li>selection</li>
@@ -252,6 +260,8 @@ Error message and password prompt
 <li>switch-statement</li>
 
 <li>Test page</li>
+
+<li>traversing a vector</li>
 
 <li>type-safety</li>
 
@@ -269,7 +279,13 @@ Error message and password prompt
 
 <li>variable</li>
 
-<li>while</li>
+<li>vector</li>
+
+<li>vector size</li>
+
+<li>Vectors</li>
+
+<li>while loop</li>
 
 <li>Wiki Styleguide</li>
 
@@ -5527,7 +5543,7 @@ See [[cin]].</pre>
 <div modified="20150309131822209" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20150314151331098" title="$:/state/sidebar">
+<div modified="20150317215444394" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20150309131652877" title="$:/state/tab--1498284803">
@@ -5539,7 +5555,7 @@ See [[cin]].</pre>
 <div modified="20150314145528952" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div list="functions range-for-loop [[block (of code)]] iteration for while Index [[Glossary of Terms]]" title="$:/StoryList">
+<div list="[[vector size]] [[member function call]] [[growing a vector]] Vectors vector Index [[Glossary of Terms]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5556,11 +5572,11 @@ See [[cin]].</pre>
     }
 }</pre>
 </div>
-<div created="20150309131457885" modified="20150315131605068" title="$:/temp/NewTagName">
+<div created="20150309131457885" modified="20150317220144043" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150311130338374" modified="20150314182725950" title="$:/temp/search">
-<pre>switch</pre>
+<div created="20150311130338374" modified="20150317215726249" title="$:/temp/search">
+<pre>loop</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="A clean theme that emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.7">
 <pre>{
@@ -5788,16 +5804,18 @@ Errors found at execution time or during execution are called //run-time errors/
 
 Names of [[variables|variable]] are also expressions.</pre>
 </div>
-<div created="20150315131704807" modified="20150315132641964" tags="concepts glossary" title="for">
+<div created="20150315131704807" modified="20150317215936575" tags="concepts glossary loop" title="for loop">
 <pre>For loops are preferable to [[while]] loops because they're eaiser to read and maintain. They have the iterator management at the top of the loop where it's easy to see.
 
 ``for (int i = 0; i&lt;100; ++i) {  // for i in range 0:100
     cout &lt;&lt; i &lt;&lt; '\t' &lt;&lt; square(i) &lt;&lt; '\n';
 }``
 
-Never modify the loop variable inside the for loop, only at the top.</pre>
+Never modify the loop variable inside the for loop, only at the top.
+
+Note that you can't use equivalence as the condition, the loop doesn't run.</pre>
 </div>
-<div created="20150309133700672" modified="20150309134418629" tags="glossary" title="function">
+<div created="20150315132841327" modified="20150315151915988" tags="concepts glossary" title="function">
 <pre>A function is a named sequence of instructions for the computer. They are reusable, which is a very important concept. C++ has several built-in functions, the simplest of which are the basic mathematical operators *, /, + and -.
 
 All functions have:
@@ -5809,10 +5827,10 @@ All functions have:
 
 Thus the minimal C++ programme is:
 
-`int main(){}`</pre>
-</div>
-<div created="20150315132841327" modified="20150315134902210" tags="concepts glossary" title="functions">
-<pre>!!!Why bother with functions?
+``int main(){}``
+
+
+!!!Why bother with functions?
 * Makes computation logically separate
 * Makes code clearer by naming the computations
 * The function is reusable in more than one place in the programme
@@ -5832,15 +5850,35 @@ Functions that return nothing have type ''void''.
 ``void write_sorry()
 {
     cout &lt;&lt; &quot;sorry\n&quot;;
-}``</pre>
+}``
+
+!!!Function declarations
+Often it's not necessary to look at the function body, we're more concerned with how to call the function.
+
+``int square(int);  //declaration of square``
+``double sqrt(double)  // declaration of sqrt``
+
+Note the use of semicolons instead of the function body. To use the function, just #include or write it's declaration.</pre>
 </div>
 <div color="#ff9300" created="20150309135624165" modified="20150309135654410" title="glossary">
 <pre></pre>
 </div>
-<div created="20150309131528293" modified="20150309143714859" tags="chapters" title="Glossary of Terms" type="text/vnd.tiddlywiki">
+<div created="20150309131528293" modified="20150317215605360" tags="chapters" title="Glossary of Terms" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;list-links [tag[glossary]]&gt;&gt;
 
 </pre>
+</div>
+<div created="20150317220056736" modified="20150317222314322" tags="concepts glossary vector" title="growing a vector">
+<pre>Often you'll start with an empty vector and then grow to its required size.
+
+``push_back()`` adds a new element to a vector. It's appended to the end and becomes the new last element of the vector.
+
+``vector&lt;double&gt; v;  // declare v empty, no elements
+v.push_back(2.4);  // add an element with val 2.4 at 'back' of v
+v.push_back(6.3);
+cout &lt;&lt; v[1] &lt;&lt; '\n';
+
+6.3``</pre>
 </div>
 <div created="20150309154508777" modified="20150309161000237" tags="glossary concepts" title="header">
 <pre>A file included using &quot;&quot;&quot;#include&quot;&quot;&quot; usually has the suffix .h and is called a //header file//.
@@ -5876,10 +5914,10 @@ In C++, ints are integer division and doubles are floating point division.
 
 Integer division is the counterpart to [[modulo]].</pre>
 </div>
-<div created="20150315125204754" modified="20150315130557733" tags="concepts glossary" title="iteration">
+<div created="20150315125204754" modified="20150317220019002" tags="concepts glossary loop" title="iteration">
 <pre>The repetition of a computational procedure applied to the result of a previous application. Often this will involve stepping through a data structure.
 
-Done with [[while]] loops and [[for]] loops.</pre>
+Done with [[while loop]] loops and [[for loop]] loops.</pre>
 </div>
 <div created="20150309161816993" modified="20150309170254449" tags="glossary" title="keep_window_open()">
 <pre>Wait for a character to be entered.
@@ -5908,6 +5946,12 @@ Literals can be of any of the basic data types, Integer Numerals, Floating-Point
 
 </pre>
 </div>
+<div color="#ff8ad8" created="20150317215449792" modified="20150317215920093" title="loop">
+<pre></pre>
+</div>
+<div created="20150317215745900" modified="20150317215802778" tags="chapters" title="Loops">
+<pre>&lt;&lt;list-links [tag[loop]]&gt;&gt;</pre>
+</div>
 <div created="20150314151332341" modified="20150314162300586" tags="concepts glossary" title="lval">
 <pre>lval is short for &quot;value that can appear on the left-hand side of an assignment&quot; where the operator modifies an operand.
 
@@ -5916,6 +5960,15 @@ for example:
 </div>
 <div created="20150309133544124" modified="20150309134428690" tags="glossary" title="main()">
 <pre>Every C++ programme must have a [[function]] called main to tell it where to start executing.</pre>
+</div>
+<div created="20150317222422663" modified="20150317222921268" tags="concepts glossary vector" title="member function call">
+<pre>A member function call, for example:
+``v.push_back(4.2);``
+
+follows the syntax:
+``object_name.member-function-name (argument-list);``
+
+push_back() is a member function of vector and is called using [[dot notation]]</pre>
 </div>
 <div created="20150309215345457" modified="20150309215927678" tags="glossary concepts" title="modulo">
 <pre>Modulo is the remainder operation.
@@ -6069,8 +6122,18 @@ b=10``
 
 When you call an overloaded function or operator, the compiler determines the most appropriate definition to use by comparing the argument types with the parameter types specified in the defininition. This is called //overload resolution//.</pre>
 </div>
-<div created="20150315132822268" modified="20150315132835853" tags="concepts glossary" title="range-for-loop">
-<pre></pre>
+<div created="20150315132822268" modified="20150317215718844" tags="concepts glossary vector loop" title="range-for-loop">
+<pre>A simple way to iterate through each element in a vector. It's usually better to use a for loop to do more complicated loops like every third element or only the second half of a vector.
+``vector&lt;int&gt; v = {5, 7, 9, 4, 6, 8};
+for (int x : v_  // for each x in v
+    cout &lt;&lt; x &lt;&lt; '\n';``
+
+This is called a range-for-loop because the word //range// can be taken to mean //sequence of elements//.
+
+``for (int x : v)`` can be read as for each int x in v.</pre>
+</div>
+<div created="20150317220135204" modified="20150317220155015" tags="chapters" title="Rules">
+<pre>&lt;&lt;list-links [tag[rules]]&gt;&gt;</pre>
 </div>
 <div color="#ff2600" created="20150309135659449" modified="20150309135659449" title="rules">
 <pre></pre>
@@ -6131,6 +6194,21 @@ defatult:
 ##test  
 - one  
 </pre>
+</div>
+<div created="20150315165301688" modified="20150317215535846" tags="concepts glossary vector" title="traversing a vector">
+<pre>As a vector knows its size, you can print the elements of a vector thus:
+
+``vector&lt;int&gt; v = {5, 7, 9, 4, 6, 8};
+for (int i=0; i&lt;v.size(); ++i)
+    cout &lt;&lt; v[i] &lt;&lt; '\n';``
+
+The first element of a vector is ``v[0]``, the last is ``v[v.size-1]``
+and if ``v.size==0`` then v is an empty vector.
+
+!!!Half-open sequence
+A half-open sequence is one that includes the first element but excludes the last one.
+
+See [[range-for-loop]]</pre>
 </div>
 <div created="20150310124302476" modified="20150310154701300" tags="concepts glossary" title="type-safety">
 <pre>A programme or programme part is type-safe when objecs are used only according to the rules for their type.
@@ -6218,7 +6296,45 @@ See also [[const]].
 
 </pre>
 </div>
-<div created="20150315130813059" modified="20150315132611036" tags="concepts glossary" title="while">
+<div color="#ffd479" created="20150315163652520" modified="20150317221205323" tags="concepts glossary vector" title="vector">
+<pre>A vector is a sequence of elements that you can access by an index.
+
+They appear to be similar to lists in Python.
+
+Vectors store their elements and their size.
+
+``int main()
+{
+    vector&lt;int&gt; v = {1,2,3,4,5,6,7};
+    cout &lt;&lt; v[6] &lt;&lt; '\n';  // print the 6th (last) element
+}``
+
+You can only assign elements of the declared type.
+
+You can define a vector of a given size without specifying values for the elements.
+
+``vector&lt;int&gt; vi(6);  // vector of 6 ints initialised to 0
+vector&lt;string&gt; vs(4);  // vector of 4 strings initialised to &quot;&quot;``
+
+Referring to non-existent elements of a vector will give a run-time error. It's wise to use its [[size|traversing a vector]] to avoid this.
+
+[[See std::vector at cplusplus.com|http://www.cplusplus.com/reference/vector/vector/]]
+
+Like [[arrays]], [[vectors|vector]] use contiguous storage locations for their elements. Unlike arrays, their size can change dynamically, with their storage being handled automatically by the [[container]].
+
+Internally, vectors use a dynamically allocated array to store their elements. This array may need to be reallocated in order to grow in size when new elements are inserted, which implies allocating a new array and moving all elements to it. This is a relatively expensive task in terms of processing time, and thus, vectors do not reallocate each time an element is added to the container.
+
+To save this processing, vectors may overallocate storage to allow possible growth and so can end up larger than strictly their size should be. This seems a fair compromise for the extra ability to grow dynamically in an efficient way.</pre>
+</div>
+<div created="20150317222902545" modified="20150317223804915" tags="concepts glossary vector" title="vector size">
+<pre>for a vector v:
+
+``v.size();`` returns the size of the vector</pre>
+</div>
+<div created="20150317215608075" modified="20150317215645672" tags="chapters" title="Vectors">
+<pre>&lt;&lt;list-links [tag[vector]]&gt;&gt;</pre>
+</div>
+<div created="20150315130813059" modified="20150317215952116" tags="concepts glossary loop" title="while loop">
 <pre>NB [[for]] loops are preferable to while loops.
 
 `` while (i&lt;100) {
