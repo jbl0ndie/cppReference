@@ -251,11 +251,13 @@ Error message and password prompt
 
 <li>range-for-loop</li>
 
-<li>Rules</li>
-
 <li>rules</li>
 
+<li>Rules</li>
+
 <li>selection</li>
+
+<li>sort</li>
 
 <li>switch-statement</li>
 
@@ -302,8 +304,8 @@ Error message and password prompt
 <div created="20150309142318110" modified="20150309143125426" tags="glossary" title="#include">
 <pre>``#include`` includes some code from a library, using definitions found in an included file.</pre>
 </div>
-<div created="20150310104402274" modified="20150310111932035" tags="glossary" title="&gt;&gt;">
-<pre>For a [[string]], reads whitespace-separated words.
+<div created="20150310104402274" modified="20150322103758540" tags="glossary" title="&gt;&gt;">
+<pre>For a [[string]], reads whitespace-separated words. To terminate an input loop, use ``Ctrl-d`` in OS X / Linux and ``Ctrl-z`` in Windows.
 
 See [[cin]].</pre>
 </div>
@@ -5519,7 +5521,7 @@ See [[cin]].</pre>
     }
 }</pre>
 </div>
-<div created="20150309131104690" modified="20150309160425462" title="$:/DefaultTiddlers">
+<div created="20150309131104690" modified="20150318193532771" title="$:/DefaultTiddlers">
 <pre>Index
 [[Glossary of Terms]]</pre>
 </div>
@@ -5555,7 +5557,7 @@ See [[cin]].</pre>
 <div modified="20150314145528952" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div list="[[vector size]] [[member function call]] [[growing a vector]] Vectors vector Index [[Glossary of Terms]]" title="$:/StoryList">
+<div list="sort Index Vectors [[vector size]] [[Glossary of Terms]] &gt;&gt;" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5804,7 +5806,7 @@ Errors found at execution time or during execution are called //run-time errors/
 
 Names of [[variables|variable]] are also expressions.</pre>
 </div>
-<div created="20150315131704807" modified="20150317215936575" tags="concepts glossary loop" title="for loop">
+<div created="20150315131704807" modified="20150320192809405" tags="concepts glossary loop" title="for loop">
 <pre>For loops are preferable to [[while]] loops because they're eaiser to read and maintain. They have the iterator management at the top of the loop where it's easy to see.
 
 ``for (int i = 0; i&lt;100; ++i) {  // for i in range 0:100
@@ -5813,7 +5815,16 @@ Names of [[variables|variable]] are also expressions.</pre>
 
 Never modify the loop variable inside the for loop, only at the top.
 
-Note that you can't use equivalence as the condition, the loop doesn't run.</pre>
+Note that you can't use equivalence as the condition, the loop doesn't run.
+
+!!!for loops without an incrementer
+It's possible to have a for loop without needing an increment:
+
+``vector&lt;double&gt; temps; // vector of temperatures
+for (double temp; cin &gt;&gt; temp;)  // read into temp, no need for an increment parameter
+    temps.push_back(temp);  // put temp into vector until a non-double received``
+
+In this, the ``cin &gt;&gt; temp`` is a boolean so can be used as the condition. Note also that you need a trailing ``;`` but no increment afterwards.</pre>
 </div>
 <div created="20150315132841327" modified="20150315151915988" tags="concepts glossary" title="function">
 <pre>A function is a named sequence of instructions for the computer. They are reusable, which is a very important concept. C++ has several built-in functions, the simplest of which are the basic mathematical operators *, /, + and -.
@@ -6132,11 +6143,11 @@ This is called a range-for-loop because the word //range// can be taken to mean 
 
 ``for (int x : v)`` can be read as for each int x in v.</pre>
 </div>
-<div created="20150317220135204" modified="20150317220155015" tags="chapters" title="Rules">
-<pre>&lt;&lt;list-links [tag[rules]]&gt;&gt;</pre>
-</div>
 <div color="#ff2600" created="20150309135659449" modified="20150309135659449" title="rules">
 <pre></pre>
+</div>
+<div created="20150317220135204" modified="20150317220155015" tags="chapters" title="Rules">
+<pre>&lt;&lt;list-links [tag[rules]]&gt;&gt;</pre>
 </div>
 <div created="20150314162310074" modified="20150314182749150" tags="concepts glossary" title="selection">
 <pre>Making a selection in C++ usually requires:
@@ -6144,6 +6155,11 @@ This is called a range-for-loop because the word //range// can be taken to mean 
 * an [[if-statement]]
 * a [[switch-statement]]
 </pre>
+</div>
+<div created="20150322100849415" modified="20150322101341836" tags="concepts glossary vector" title="sort">
+<pre>For a vector v:
+
+``sort(v);`` sorts the elements stored in the vector into rank order so that v[0] is the smallest and v[v.size()-1] is the largest.</pre>
 </div>
 <div created="20150314180519723" modified="20150315125127274" tags="concepts glossary" title="switch-statement">
 <pre>The comparison of a value against a set of constants to make a selection is so commonly useful that there's a special statement for it: the switch-statement.
