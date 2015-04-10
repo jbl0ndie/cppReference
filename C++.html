@@ -147,6 +147,8 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--1835078512</li>
 
+<li>$:/state/tag-manager/unsure</li>
+
 <li>$:/StoryList</li>
 
 <li>$:/temp/info-plugin</li>
@@ -183,6 +185,8 @@ Error message and password prompt
 
 <li>conversions</li>
 
+<li>coordinate systems</li>
+
 <li>cout</li>
 
 <li>declaration</li>
@@ -203,9 +207,13 @@ Error message and password prompt
 
 <li>Glossary of Terms</li>
 
+<li>GLSL</li>
+
 <li>growing a vector</li>
 
 <li>header</li>
+
+<li>homogeneous coordinates</li>
 
 <li>if-statement</li>
 
@@ -243,11 +251,21 @@ Error message and password prompt
 
 <li>object code</li>
 
+<li>openFrameworks</li>
+
+<li>OpenGL</li>
+
+<li>OpenGL client / server model</li>
+
 <li>operators</li>
 
 <li>output operator</li>
 
 <li>overloading</li>
+
+<li>popMatrix()</li>
+
+<li>pushMatrix()</li>
 
 <li>range-for-loop</li>
 
@@ -257,11 +275,19 @@ Error message and password prompt
 
 <li>selection</li>
 
+<li>shader.begin() and shader.end()</li>
+
+<li>shader.load</li>
+
+<li>shaders in openFrameworks</li>
+
 <li>sort</li>
 
 <li>switch-statement</li>
 
 <li>Test page</li>
+
+<li>transformations</li>
 
 <li>traversing a vector</li>
 
@@ -269,7 +295,11 @@ Error message and password prompt
 
 <li>types</li>
 
+<li>uniform</li>
+
 <li>universal and uniform initialisation</li>
+
+<li>unsure</li>
 
 <li>Untitled</li>
 
@@ -286,6 +316,8 @@ Error message and password prompt
 <li>vector size</li>
 
 <li>Vectors</li>
+
+<li>vertex shader</li>
 
 <li>while loop</li>
 
@@ -5557,7 +5589,10 @@ See [[cin]].</pre>
 <div modified="20150314145528952" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div list="sort Index Vectors [[vector size]] [[Glossary of Terms]] &gt;&gt;" title="$:/StoryList">
+<div modified="20150407153319116" title="$:/state/tag-manager/unsure">
+<pre>closed</pre>
+</div>
+<div list="GLSL [[shaders in openFrameworks]] [[shader.begin() and shader.end()]] Index OpenGL [[OpenGL client / server model]] shader.load [[Glossary of Terms]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5574,7 +5609,7 @@ See [[cin]].</pre>
     }
 }</pre>
 </div>
-<div created="20150309131457885" modified="20150317220144043" title="$:/temp/NewTagName">
+<div created="20150309131457885" modified="20150407153459474" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div created="20150311130338374" modified="20150317215726249" title="$:/temp/search">
@@ -5773,6 +5808,11 @@ double df = 9/5*dc+32;  // beware of narrowing``
 cin &gt; dc;
 double df = 9.0/5*dc+32; // is better because 9.0 forces the expression to use doubles.``</pre>
 </div>
+<div created="20150406124256598" modified="20150406164251364" tags="concepts glossary OpenGL" title="coordinate systems">
+<pre>A coordinate sytem is a way of describing locations using numbers. [[OpenGL]] uses the cartesian coordinate system.
+
+The screen coordinate system and the model coordinate system can be different. Usually the screen coordinate system has 0,0,0 in the top left of the screen.</pre>
+</div>
 <div created="20150309155317165" modified="20150309213225702" tags="glossary" title="cout">
 <pre>Used with &lt;&lt; to create a standard output stream.
 
@@ -5879,6 +5919,9 @@ Note the use of semicolons instead of the function body. To use the function, ju
 
 </pre>
 </div>
+<div created="20150410145230343" modified="20150410145746382" tags="concepts glossary OpenGL" title="GLSL">
+<pre>OpenGL Shading Language (GLSL) is a relatively new programming language based on ANSI C, with extensions of vector and matrix types to improve its 3D graphics capabilities. It also borrows some mechanisms from C++, like overloading functions. See the official [[documentation|https://www.opengl.org/documentation/glsl/]].</pre>
+</div>
 <div created="20150317220056736" modified="20150317222314322" tags="concepts glossary vector" title="growing a vector">
 <pre>Often you'll start with an empty vector and then grow to its required size.
 
@@ -5896,6 +5939,19 @@ cout &lt;&lt; v[1] &lt;&lt; '\n';
 
 A header file contains definitions of terms, such as [[cout]] that are used in programmes.</pre>
 </div>
+<div created="20150406164855249" modified="20150406165548438" tags="concepts glossary OpenGL" title="homogeneous coordinates">
+<pre>//this is not yet correct//
+
+The fourth component of a vertex / vector / point (w).
+
+Given the coordinates [x,y,z]:
+
+[x,y,z,0] is a vector
+
+[x,y,z,1] is a vertex/point
+
+See also [[http://en.wikipedia.org/wiki/Homogeneous_coordinates]]</pre>
+</div>
 <div created="20150314163918704" modified="20150314182943460" tags="concepts glossary" title="if-statement">
 <pre>The use of braces is optional but Vincent and Google reckon that this is more legible. It's also congruent to JavaScript, which is nice.
 
@@ -5907,7 +5963,7 @@ A header file contains definitions of terms, such as [[cout]] that are used in p
     statement;
 }``</pre>
 </div>
-<div created="20150309131017848" modified="20150309160820390" tags="" title="Index" type="text/vnd.tiddlywiki">
+<div created="20150309131017848" modified="20150406170200349" tags="" title="Index" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;list-links [tag[chapters]]&gt;&gt;
 
 Remember to follow the [[Wiki Styleguide]].</pre>
@@ -6044,6 +6100,21 @@ Object code and executables are not portable among operating systems.
 
 </pre>
 </div>
+<div color="#ff2f92" created="20150406145412364" modified="20150406145427810" title="openFrameworks">
+<pre></pre>
+</div>
+<div color="#d4fb79" created="20150406170037179" modified="20150406170326079" tags="chapters" title="OpenGL">
+<pre>&lt;&lt;list-links [tag[OpenGL]]&gt;&gt;</pre>
+</div>
+<div created="20150406170219043" modified="20150407152744256" tags="concepts OpenGL glossary" title="OpenGL client / server model">
+<pre>!!!Client
+The programme from which OpenGL functions are called (CPU)
+
+!!!Server
+The programme that interprets and executes these function calls (GPU)
+
+OpenGL allows you to programme both client and server.</pre>
+</div>
 <div created="20150309170259449" modified="20150314154455197" tags="glossary" title="operators">
 <pre>|cssClass|k
 |!action | !bool | char | int | double | string |h
@@ -6133,6 +6204,16 @@ b=10``
 
 When you call an overloaded function or operator, the compiler determines the most appropriate definition to use by comparing the argument types with the parameter types specified in the defininition. This is called //overload resolution//.</pre>
 </div>
+<div created="20150406145643860" modified="20150406145656613" tags="glossary OpenGL openFrameworks" title="popMatrix()">
+<pre>``void ofPopMatrix()``
+
+pops the newest matrix off the matrix stack</pre>
+</div>
+<div created="20150406145347201" modified="20150406145637621" tags="glossary OpenGL openFrameworks" title="pushMatrix()">
+<pre>``void ofPushMatrix()``
+
+pushes a new matrix onto the matrix stack</pre>
+</div>
 <div created="20150315132822268" modified="20150317215718844" tags="concepts glossary vector loop" title="range-for-loop">
 <pre>A simple way to iterate through each element in a vector. It's usually better to use a for loop to do more complicated loops like every third element or only the second half of a vector.
 ``vector&lt;int&gt; v = {5, 7, 9, 4, 6, 8};
@@ -6154,6 +6235,54 @@ This is called a range-for-loop because the word //range// can be taken to mean 
 
 * an [[if-statement]]
 * a [[switch-statement]]
+</pre>
+</div>
+<div created="20150410144512334" modified="20150410144842051" tags="glossary openFrameworks OpenGL" title="shader.begin() and shader.end()">
+<pre>Tells the renderer that we want to pass all the vertices, textures and fragments through the shader, rather than passed directly to the framebuffer.
+
+``void ofApp::draw(){
+    ofSetColor(255);
+    shader.begin();
+    ofRect(0, 0, ofGetWidth(), ofGetHeight());
+    shader.end();
+}``
+
+It's closed by a shader.end() call.</pre>
+</div>
+<div created="20150407150056918" modified="20150407151221897" tags="openFrameworks OpenGL" title="shader.load">
+<pre>``void ofApp::setup(){
+ 
+#ifdef TARGET_OPENGLES
+    shader.load(&quot;shadersES2/shader&quot;); // OpenGL for mobile
+#else
+    if(ofIsGLProgrammableRenderer()){
+        shader.load(&quot;shadersGL3/shader&quot;); // OpenGL for new computers
+    }else{
+        shader.load(&quot;shadersGL2/shader&quot;); // OpenGL for older computers
+    }
+#endif
+}``
+
+This will choose between the different OpenGL versions.
+``shader.load()`` loads both vertex and fragment shaders, assuming they have the same name. If they don't, use:
+
+``shader.load(&quot;myCrazyVertFile.vert&quot;, &quot;myCrazyFragFile.frag&quot;);``
+
+which passes each file separately.</pre>
+</div>
+<div created="20150410144942301" modified="20150410150909474" tags="concepts glossary openFrameworks OpenGL" title="shaders in openFrameworks">
+<pre>Shaders are programmes that are executed by the GPU. They're written in [[GLSL]].
+
+They can be implemented as a string inside an openFrameworks application, or as separate shader files, which live in the ``/bin/data`` folder, usually in a ``/shaders`` sub-folder for tidiness. 
+
+Shaders come in different types:
+
+*[[vertex shader]] - most common
+*[[fragment shader]] - most common
+*[[geometry shader]]
+*[[tessellation control shader]]
+*[[tessellation evaluation shader]]
+*[[compute shader]]
 </pre>
 </div>
 <div created="20150322100849415" modified="20150322101341836" tags="concepts glossary vector" title="sort">
@@ -6210,6 +6339,23 @@ defatult:
 ##test  
 - one  
 </pre>
+</div>
+<div created="20150406144215897" modified="20150406145247286" tags="concepts glossary OpenGL" title="transformations">
+<pre>Transformations are modifcations to one or more of the coordinate system space.
+
+The ofTranslate() method moves the location where objects will be drawn.
+
+``ofTranslate(200, 200, 0);  
+ofRect(0, 0, 100, 100);``
+
+Will draw a 100x100 rectangle 200 from the left and 200 down from the top left hand corner of the screen.
+
+To make this work, you have to call a [[pushMatrix()]] and [[popMatrix()]]: 
+
+``ofPushMatrix();  // push this onto the transformation stack - all drawing operations will now use this transform
+ofTranslate(200, 200, 0);  
+ofRect(0, 0, 100, 100);
+ofPopMatrix();  // pop this back off the stack - drawing operations will not now be affected by this transform``</pre>
 </div>
 <div created="20150315165301688" modified="20150317215535846" tags="concepts glossary vector" title="traversing a vector">
 <pre>As a vector knows its size, you can print the elements of a vector thus:
@@ -6276,6 +6422,22 @@ It's best practice to [[initialise|initialising]] your variables because this en
 | group | type name | note |h
 |String types| string | a string of char in &quot;here or there&quot; double quotes |</pre>
 </div>
+<div created="20150407152352161" modified="20150407153431948" tags="concepts glossary OpenGL unsure" title="uniform">
+<pre>A uniform is a value passed to each shader from the [[client programme|OpenGL client / server model]] to each shader. Uniform variables act as constants, at least for the duration of an openFrameworks //draw()// method. They're read-only in the shaders but can be updated in the client programme thus:
+
+``shader.setUniform1f(&quot;myUniform&quot;, 1.f);  // not sure what this means yet``
+
+The uniforms are fed into the graphics pipeline so they're available at both stages of shading.
+
+There are many kinds of uniforms:
+
+* vec3
+* vec4
+* mat4
+* structs
+* and others that I haven't met yet
+</pre>
+</div>
 <div created="20150310154108954" modified="20150310154606374" tags="concepts glossary" title="universal and uniform initialisation">
 <pre>C++11 introduces a new notation that outlaws narrowing conversions (where converting between types reduces precision).
 
@@ -6292,6 +6454,9 @@ When the initialiser is an integer literal, the compiler can check the actual va
 ``int char b1 {1000}; // error: narrowing (assuming 8-bit chars)``
 
 ``char b2 {48}; // ok``</pre>
+</div>
+<div color="#76d6ff" created="20150407153243343" modified="20150407153252417" title="unsure">
+<pre></pre>
 </div>
 <div title="Untitled">
 <pre>[[$:/plugins/tiddlywiki/markdown]]</pre>
@@ -6349,6 +6514,13 @@ To save this processing, vectors may overallocate storage to allow possible grow
 </div>
 <div created="20150317215608075" modified="20150317215645672" tags="chapters" title="Vectors">
 <pre>&lt;&lt;list-links [tag[vector]]&gt;&gt;</pre>
+</div>
+<div created="20150406171026103" modified="20150407153522865" tags="concepts glossary OpenGL unsure" title="vertex shader">
+<pre>We supply [[vertices]] and attributes and matrices. OpenGL then does vertex processing with the vertex shader programme.
+
+See also [[fragment shader]].
+
+//incomplete//</pre>
 </div>
 <div created="20150315130813059" modified="20150317215952116" tags="concepts glossary loop" title="while loop">
 <pre>NB [[for]] loops are preferable to while loops.
