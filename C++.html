@@ -175,9 +175,9 @@ Error message and password prompt
 
 <li>compiler</li>
 
-<li>Concepts</li>
-
 <li>concepts</li>
+
+<li>Concepts</li>
 
 <li>const</li>
 
@@ -201,7 +201,13 @@ Error message and password prompt
 
 <li>for loop</li>
 
+<li>fragment shader</li>
+
 <li>function</li>
+
+<li>gl_FragCoord</li>
+
+<li>gl_position</li>
 
 <li>glossary</li>
 
@@ -241,11 +247,15 @@ Error message and password prompt
 
 <li>member function call</li>
 
+<li>meshes or models</li>
+
 <li>modulo</li>
 
 <li>names</li>
 
 <li>newline</li>
+
+<li>normal</li>
 
 <li>object</li>
 
@@ -259,25 +269,33 @@ Error message and password prompt
 
 <li>operators</li>
 
+<li>out vec4</li>
+
 <li>output operator</li>
 
 <li>overloading</li>
 
 <li>popMatrix()</li>
 
+<li>project navigator symbols</li>
+
 <li>pushMatrix()</li>
 
 <li>range-for-loop</li>
 
-<li>rules</li>
-
 <li>Rules</li>
 
+<li>rules</li>
+
 <li>selection</li>
+
+<li>shader types</li>
 
 <li>shader.begin() and shader.end()</li>
 
 <li>shader.load</li>
+
+<li>shader.setUniform</li>
 
 <li>shaders in openFrameworks</li>
 
@@ -290,6 +308,10 @@ Error message and password prompt
 <li>transformations</li>
 
 <li>traversing a vector</li>
+
+<li>triangle</li>
+
+<li>type casting</li>
 
 <li>type-safety</li>
 
@@ -317,11 +339,17 @@ Error message and password prompt
 
 <li>Vectors</li>
 
+<li>vertex</li>
+
 <li>vertex shader</li>
 
 <li>while loop</li>
 
 <li>Wiki Styleguide</li>
+
+<li>Xcode</li>
+
+<li>Xcode reference</li>
 
 </ul>
 </p>
@@ -5577,7 +5605,7 @@ See [[cin]].</pre>
 <div modified="20150309131822209" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20150317215444394" title="$:/state/sidebar">
+<div modified="20150412100836827" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div modified="20150309131652877" title="$:/state/tab--1498284803">
@@ -5592,7 +5620,7 @@ See [[cin]].</pre>
 <div modified="20150407153319116" title="$:/state/tag-manager/unsure">
 <pre>closed</pre>
 </div>
-<div list="GLSL [[shaders in openFrameworks]] [[shader.begin() and shader.end()]] Index OpenGL [[OpenGL client / server model]] shader.load [[Glossary of Terms]]" title="$:/StoryList">
+<div list="$:/TagManager [[project navigator symbols]] Index [[Glossary of Terms]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5609,11 +5637,11 @@ See [[cin]].</pre>
     }
 }</pre>
 </div>
-<div created="20150309131457885" modified="20150407153459474" title="$:/temp/NewTagName">
+<div created="20150309131457885" modified="20150413194325901" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150311130338374" modified="20150317215726249" title="$:/temp/search">
-<pre>loop</pre>
+<div created="20150311130338374" modified="20150410154609993" title="$:/temp/search">
+<pre>uniform</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="A clean theme that emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.7">
 <pre>{
@@ -5756,11 +5784,11 @@ etc etc
 
 The compiler reads your source code and tries to make sense of it. It checks for syntax errors. If it can't make sense of anything, you'll get a [[compile-time error]].</pre>
 </div>
-<div created="20150309160605310" modified="20150309160830299" tags="chapters" title="Concepts">
-<pre>&lt;&lt;list-links [tag[concepts]]&gt;&gt;</pre>
-</div>
 <div color="#0096ff" created="20150309160928271" modified="20150309160928271" title="concepts">
 <pre></pre>
+</div>
+<div created="20150309160605310" modified="20150309160830299" tags="chapters" title="Concepts">
+<pre>&lt;&lt;list-links [tag[concepts]]&gt;&gt;</pre>
 </div>
 <div created="20150310095527156" modified="20150310095939638" tags="glossary" title="const">
 <pre>A variable whose value is fixed at declaration and cannot be changed by the programme.
@@ -5866,6 +5894,11 @@ for (double temp; cin &gt;&gt; temp;)  // read into temp, no need for an increme
 
 In this, the ``cin &gt;&gt; temp`` is a boolean so can be used as the condition. Note also that you need a trailing ``;`` but no increment afterwards.</pre>
 </div>
+<div created="20150410153403073" modified="20150410164450523" tags="concepts glossary OpenGL" title="fragment shader">
+<pre>Determines the colour of a pixel, using lighting, materials, [[normals|normal]] etc to do so. It is also known as a pixel shader, which is what it's called in Direct3D.
+
+A fragment shader operates once per pixel.</pre>
+</div>
 <div created="20150315132841327" modified="20150315151915988" tags="concepts glossary" title="function">
 <pre>A function is a named sequence of instructions for the computer. They are reusable, which is a very important concept. C++ has several built-in functions, the simplest of which are the basic mathematical operators *, /, + and -.
 
@@ -5911,6 +5944,25 @@ Often it's not necessary to look at the function body, we're more concerned with
 
 Note the use of semicolons instead of the function body. To use the function, just #include or write it's declaration.</pre>
 </div>
+<div created="20150411085359595" modified="20150411085743140" tags="glossary OpenGL" title="gl_FragCoord">
+<pre>The location of the fragment (pixel) in screen space.
+
+gl_FragCoord can also be replaced by an 'out' vec2 passed from the vertex shader. I think this means you can get the coordinates from the vertex shader.</pre>
+</div>
+<div created="20150411090622067" modified="20150411090946503" tags="glossary OpenGL" title="gl_position">
+<pre>This is what comes out of the vertex shader.
+
+``// vertex shader
+ 
+#version 150
+ 
+uniform mat4 modelViewProjectionMatrix;
+in vec4 position;
+ 
+void main(){
+    gl_Position = modelViewProjectionMatrix * position;
+}``</pre>
+</div>
 <div color="#ff9300" created="20150309135624165" modified="20150309135654410" title="glossary">
 <pre></pre>
 </div>
@@ -5919,8 +5971,10 @@ Note the use of semicolons instead of the function body. To use the function, ju
 
 </pre>
 </div>
-<div created="20150410145230343" modified="20150410145746382" tags="concepts glossary OpenGL" title="GLSL">
-<pre>OpenGL Shading Language (GLSL) is a relatively new programming language based on ANSI C, with extensions of vector and matrix types to improve its 3D graphics capabilities. It also borrows some mechanisms from C++, like overloading functions. See the official [[documentation|https://www.opengl.org/documentation/glsl/]].</pre>
+<div created="20150410145230343" modified="20150410153243041" tags="concepts glossary OpenGL" title="GLSL">
+<pre>OpenGL Shading Language (GLSL) is a relatively new programming language based on ANSI C, with extensions of vector and matrix types to improve its 3D graphics capabilities. It also borrows some mechanisms from C++, like overloading functions. GLSL is a compiled language.
+
+See the official [[documentation|https://www.opengl.org/documentation/glsl/]].</pre>
 </div>
 <div created="20150317220056736" modified="20150317222314322" tags="concepts glossary vector" title="growing a vector">
 <pre>Often you'll start with an empty vector and then grow to its required size.
@@ -5939,8 +5993,18 @@ cout &lt;&lt; v[1] &lt;&lt; '\n';
 
 A header file contains definitions of terms, such as [[cout]] that are used in programmes.</pre>
 </div>
-<div created="20150406164855249" modified="20150406165548438" tags="concepts glossary OpenGL" title="homogeneous coordinates">
-<pre>//this is not yet correct//
+<div created="20150406164855249" modified="20150411082951330" tags="concepts glossary OpenGL" title="homogeneous coordinates">
+<pre>Homogeneous coordinates have an extra dimension called ``W`` which scales the ``X``, ``Y`` and ``Z`` dimensions. Imagine a 2D projection, say a cinema screen and projector. Moving the projector closer or further away will scale the image and thus the X and Y coordinates of a point in the projected image.
+
+Rotation and scaling transformation matrices only require three columns but matrices for translation and perspective projection transformations require four, hence we must use homogeneous coordinates. This is why homogeneous coordinates are so common in 3D graphics. Usually the W coordinate is unchanged, so I suppose its a bit of a hack.
+
+!!Correctness
+The ``X``, ``Y`` and ``Z`` coordinates are said to be correct when the ``W`` coordinate is equal to 1. Any homogeneous coordinate can be made correct by dividing all the coordinates by the ``W`` value, except when W = 0.
+
+When W = 0, the coordinate represents a point at infinity (a vector with infinite length). This is often used to indicate [[infinite lights]].
+
+
+!!!Not sure about this bit
 
 The fourth component of a vertex / vector / point (w).
 
@@ -5950,7 +6014,7 @@ Given the coordinates [x,y,z]:
 
 [x,y,z,1] is a vertex/point
 
-See also [[http://en.wikipedia.org/wiki/Homogeneous_coordinates]]</pre>
+See also [[Tom Dalling's explanation|http://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/]]</pre>
 </div>
 <div created="20150314163918704" modified="20150314182943460" tags="concepts glossary" title="if-statement">
 <pre>The use of braces is optional but Vincent and Google reckon that this is more legible. It's also congruent to JavaScript, which is nice.
@@ -5963,7 +6027,7 @@ See also [[http://en.wikipedia.org/wiki/Homogeneous_coordinates]]</pre>
     statement;
 }``</pre>
 </div>
-<div created="20150309131017848" modified="20150406170200349" tags="" title="Index" type="text/vnd.tiddlywiki">
+<div created="20150309131017848" modified="20150413194613362" tags="" title="Index" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;list-links [tag[chapters]]&gt;&gt;
 
 Remember to follow the [[Wiki Styleguide]].</pre>
@@ -6037,6 +6101,9 @@ follows the syntax:
 
 push_back() is a member function of vector and is called using [[dot notation]]</pre>
 </div>
+<div created="20150410152915459" modified="20150410153134824" tags="concepts glossary OpenGL" title="meshes or models">
+<pre>All models or meshes in OpenGL are made from triangles. Unlike most 3D modelling software, OpenGL does not support Quads (which have four vertices).</pre>
+</div>
 <div created="20150309215345457" modified="20150309215927678" tags="glossary concepts" title="modulo">
 <pre>Modulo is the remainder operation.
 
@@ -6087,6 +6154,13 @@ Modulo is the counterpart to [[integer (floor) division]] and only works with //
 </div>
 <div created="20150311130206890" modified="20150311130304758" tags="glossary" title="newline">
 <pre>\n is newline in C++</pre>
+</div>
+<div created="20150410152458935" modified="20150410152907630" tags="glossary concepts OpenGL" title="normal">
+<pre>A normal is the direction in which a triangle or other 3D face is oriented. Usually in computer graphics, faces are only rendered from one side. The normal is perpendicular to the plane of all three vertices in the triangle.
+
+In 3D modelling, when transferring models between different drawing programmes, it's quite common to end up with the normals of faces being flipped, resulting in 'holes' in your model. Most applications have tools for flipping the normals back, or forcing them all to point outwards.
+
+Vertices can also have normals.</pre>
 </div>
 <div created="20150310122356428" modified="20150310122449469" tags="concepts glossary" title="object">
 <pre>An object is some memory that holds a [[value]] of a given [[type|types]].</pre>
@@ -6194,6 +6268,14 @@ b=10``
 
 </pre>
 </div>
+<div created="20150411085748572" modified="20150411090616821" tags="glossary OpenGL" title="out vec4">
+<pre>``outputColor = vec4(r, g, b, a);
+out vec4 outputColor;``
+
+Outs are passed to the next stage in the graphics pipeline. Presumably that is a colour value per fragment.
+
+You only need one output from a fragment shader, whereas a vertex shader can have multiple outs. The fragment shader simply calculates the colour of each pixel based on all the values passed it from the vertex shader.</pre>
+</div>
 <div created="20150309132443031" modified="20150309142035641" tags="glossary" title="output operator">
 <pre>For example:
 
@@ -6208,6 +6290,14 @@ When you call an overloaded function or operator, the compiler determines the mo
 <pre>``void ofPopMatrix()``
 
 pops the newest matrix off the matrix stack</pre>
+</div>
+<div created="20150413194251273" modified="20150413194547163" tags="glossary Xcode" title="project navigator symbols">
+<pre>*? - Unversioned (untracked by source control)
+*M - Modified
+*A - Added
+*A+ - Moved / renamed
+*U - Newer version of a file on source control
+</pre>
 </div>
 <div created="20150406145347201" modified="20150406145637621" tags="glossary OpenGL openFrameworks" title="pushMatrix()">
 <pre>``void ofPushMatrix()``
@@ -6224,17 +6314,30 @@ This is called a range-for-loop because the word //range// can be taken to mean 
 
 ``for (int x : v)`` can be read as for each int x in v.</pre>
 </div>
-<div color="#ff2600" created="20150309135659449" modified="20150309135659449" title="rules">
-<pre></pre>
-</div>
 <div created="20150317220135204" modified="20150317220155015" tags="chapters" title="Rules">
 <pre>&lt;&lt;list-links [tag[rules]]&gt;&gt;</pre>
+</div>
+<div color="#ff2600" created="20150309135659449" modified="20150309135659449" title="rules">
+<pre></pre>
 </div>
 <div created="20150314162310074" modified="20150314182749150" tags="concepts glossary" title="selection">
 <pre>Making a selection in C++ usually requires:
 
 * an [[if-statement]]
 * a [[switch-statement]]
+</pre>
+</div>
+<div created="20150410151836759" modified="20150410153216835" tags="concepts glossary openFrameworks OpenGL" title="shader types">
+<pre>Shaders are programmes that are executed by the GPU. They're written in [[GLSL]].
+
+Shaders come in different types, in the [[OpenGL graphics pipeline]] they operate in this order:
+
+*[[vertex shader]] - most common
+*[[tessellation control shader]]
+*[[tessellation evaluation shader]]
+*[[geometry shader]]
+*[[fragment shader]] - most common
+*[[compute shader]]
 </pre>
 </div>
 <div created="20150410144512334" modified="20150410144842051" tags="glossary openFrameworks OpenGL" title="shader.begin() and shader.end()">
@@ -6270,12 +6373,66 @@ This will choose between the different OpenGL versions.
 
 which passes each file separately.</pre>
 </div>
-<div created="20150410144942301" modified="20150410150909474" tags="concepts glossary openFrameworks OpenGL" title="shaders in openFrameworks">
+<div created="20150412144321679" modified="20150412184812960" tags="glossary openFrameworks OpenGL" title="shader.setUniform">
+<pre>!float, int or vector?
+``shader.setUniform1f()`` is a float
+
+``shader.setUniform1i()`` is an int
+
+``shader.setUniform1v()`` is a vector
+
+!!shader.setUniform1f()
+Used to pass one value into a shader.
+
+``shader.setUniform1f(&quot;name&quot;, var1);``
+
+``shader.setUniform1f(&quot;scaleValue&quot;, sv1);``
+
+On the shader side you'll need to receive it using
+``uniform float name;``
+
+``uniform float scaleValue;``
+
+!!shader.setUniform2f()
+Used to pass two values into a shader.
+``shader.setUniform2f(&quot;name&quot;, var1, var2);``
+
+``shader.setUniform2f(&quot;mousePosition&quot;, mx, my);``
+
+On the shader side you'll need to receive it using
+``uniform vec2 name;``
+
+``uniform vec2 mousePosition;``
+
+!!shader.setUniform3f()
+Used to pass three values into a shader.
+``shader.setUniform3f(&quot;name&quot;, var1, var2, var3);``
+
+``shader.setUniform3f(&quot;objectPosition&quot;, mx, my, mz);``
+
+On the shader side you'll need to receive it using
+``uniform vec3 name;``
+
+``uniform vec3 objectPosition;``
+
+!!shader.setUniform4f()
+Used to pass four values into a shader.
+``shader.setUniform4f(&quot;name&quot;, var1, var2, var3, var4);``
+
+``shader.setUniform4f(&quot;objectColour&quot;, r, g, b, a);``
+
+On the shader side you'll need to receive it using
+``uniform vec4 name;``
+
+``uniform vec4 objectColour;``
+</pre>
+</div>
+<div created="20150410144942301" modified="20150410151831552" tags="concepts glossary openFrameworks OpenGL" title="shaders in openFrameworks">
 <pre>Shaders are programmes that are executed by the GPU. They're written in [[GLSL]].
 
 They can be implemented as a string inside an openFrameworks application, or as separate shader files, which live in the ``/bin/data`` folder, usually in a ``/shaders`` sub-folder for tidiness. 
 
-Shaders come in different types:
+Shaders come in different [[types|shader types]]:
 
 *[[vertex shader]] - most common
 *[[fragment shader]] - most common
@@ -6372,6 +6529,41 @@ A half-open sequence is one that includes the first element but excludes the las
 
 See [[range-for-loop]]</pre>
 </div>
+<div created="20150410152350797" modified="20150410152453469" tags="glossary concepts OpenGL" title="triangle">
+<pre>A triangle is made up of three [[vertices|vertex]] and has a [[normal]].</pre>
+</div>
+<div created="20150412100838385" modified="20150412161457142" tags="concepts glossary" title="type casting">
+<pre>Putting the type you know in brackets, to tell the compiler that you know what you're doing and that it's correct. You're effectively overrulling the compiler's checks.
+
+!!Old, C-style method
+
+``float varA = 9.99;
+int varB = (int)varA;``
+
+This is considered bad style in C++ because it doesn't make any distinction between different kinds of cast.
+
+See [[http://stackoverflow.com/a/103868|here]].
+
+!!New, C++ method
+
+``float varX = 9.99;
+int varY = static_cast&lt;int&gt;(varX);``
+
+!!Kinds of casting
+
+*``static_cast&lt;&gt;()`` usually safe
+*``reinterpret_cast&lt;&gt;()`` always dangerous
+*``const_cast&lt;&gt;()`` always dangerous
+*``dynamic_cast&lt;&gt;()`` safe as long as it's checked or a possible exception is taken into account
+
+!!Other notes
+Joshua Noble treats casting in a much more relaxed way in his book 'Programming Interactivity'.
+
+If you have a number that's an int but you need it to be a float, then you cast it (he uses the frowned upon C-like method). Casting is required because you can't change the type of a variable after it's been declared.
+
+You cannot cast an array, you'd have to cast each element using a loop of some kind.
+</pre>
+</div>
 <div created="20150310124302476" modified="20150310154701300" tags="concepts glossary" title="type-safety">
 <pre>A programme or programme part is type-safe when objecs are used only according to the rules for their type.
 
@@ -6422,10 +6614,12 @@ It's best practice to [[initialise|initialising]] your variables because this en
 | group | type name | note |h
 |String types| string | a string of char in &quot;here or there&quot; double quotes |</pre>
 </div>
-<div created="20150407152352161" modified="20150407153431948" tags="concepts glossary OpenGL unsure" title="uniform">
-<pre>A uniform is a value passed to each shader from the [[client programme|OpenGL client / server model]] to each shader. Uniform variables act as constants, at least for the duration of an openFrameworks //draw()// method. They're read-only in the shaders but can be updated in the client programme thus:
+<div created="20150407152352161" modified="20150412155952289" tags="concepts glossary OpenGL unsure" title="uniform">
+<pre>A uniform is a value passed to each shader from the [[client programme|OpenGL client / server model]] to each shader, used to set addtional values in each stage of the shading. Uniform variables act as constants, at least for the duration of an openFrameworks //draw()// method. They're read-only in the shaders but can be updated in the client programme thus:
 
 ``shader.setUniform1f(&quot;myUniform&quot;, 1.f);  // not sure what this means yet``
+
+Uniforms are only updated per call of the draw method, not per vertex.
 
 The uniforms are fed into the graphics pipeline so they're available at both stages of shading.
 
@@ -6515,12 +6709,15 @@ To save this processing, vectors may overallocate storage to allow possible grow
 <div created="20150317215608075" modified="20150317215645672" tags="chapters" title="Vectors">
 <pre>&lt;&lt;list-links [tag[vector]]&gt;&gt;</pre>
 </div>
-<div created="20150406171026103" modified="20150407153522865" tags="concepts glossary OpenGL unsure" title="vertex shader">
-<pre>We supply [[vertices]] and attributes and matrices. OpenGL then does vertex processing with the vertex shader programme.
+<div created="20150410152252889" modified="20150410152345491" tags="glossary concepts OpenGL" title="vertex">
+<pre>A vertex is a single point in 3D space, ``(x, y, z)``.</pre>
+</div>
+<div created="20150406171026103" modified="20150410165438221" tags="concepts glossary OpenGL" title="vertex shader">
+<pre>We supply [[vertices]] and attributes and matrices. Vertex shaders take a single point and adjust it, changing the position of the vertex (i.e. translate, rotate, skew). It can also determine the colour of a vertex, as can the [[fragment shader]].
 
-See also [[fragment shader]].
+A vertext shader receives a single vertex from the vertex stream and generates a single vertex to the output vertex stream. There must be a 1:1 mapping from input to output.
 
-//incomplete//</pre>
+Vertex shaders are executed once per vertex.</pre>
 </div>
 <div created="20150315130813059" modified="20150317215952116" tags="concepts glossary loop" title="while loop">
 <pre>NB [[for]] loops are preferable to while loops.
@@ -6538,6 +6735,12 @@ Remember to initialise the loop variable, i, and make sure that the loop doesn't
 # use tags to denote hierachy and conceptual grouping, allowing the creation of thematic list pages later on as the wiki grows
 # use lowercase for tags
 # CamelCase words are auto-linked</pre>
+</div>
+<div color="#06c6f5" created="20150413194408038" modified="20150413194423189" title="Xcode">
+<pre></pre>
+</div>
+<div created="20150413194005425" modified="20150413194609352" tags="chapters" title="Xcode reference">
+<pre>&lt;&lt;list-links [tag[Xcode]]&gt;&gt;</pre>
 </div>
 
 </div>
