@@ -185,9 +185,9 @@ Error message and password prompt
 
 <li>compiler</li>
 
-<li>Concepts</li>
-
 <li>concepts</li>
+
+<li>Concepts</li>
 
 <li>const</li>
 
@@ -203,7 +203,11 @@ Error message and password prompt
 
 <li>defininition</li>
 
+<li>destination</li>
+
 <li>disableArbTexture()</li>
+
+<li>Draft of 'functions'</li>
 
 <li>EmitVertex()</li>
 
@@ -223,15 +227,25 @@ Error message and password prompt
 
 <li>fragment shader</li>
 
-<li>function</li>
+<li>function declarations</li>
+
+<li>function overloading</li>
+
+<li>function prototype</li>
+
+<li>functions</li>
 
 <li>geometry shader</li>
+
+<li>getters and setters</li>
 
 <li>gl instance id</li>
 
 <li>gl_FragCoord</li>
 
 <li>gl_position</li>
+
+<li>glBlendFunc()</li>
 
 <li>glossary</li>
 
@@ -287,6 +301,8 @@ Error message and password prompt
 
 <li>Noise Workshop</li>
 
+<li>non-ASCII characters are not allowed outside of literals and identifiers</li>
+
 <li>normal</li>
 
 <li>object</li>
@@ -321,9 +337,9 @@ Error message and password prompt
 
 <li>ray marching</li>
 
-<li>rules</li>
-
 <li>Rules</li>
+
+<li>rules</li>
 
 <li>selection</li>
 
@@ -340,6 +356,8 @@ Error message and password prompt
 <li>shaders in openFrameworks</li>
 
 <li>sort</li>
+
+<li>source</li>
 
 <li>spawn position</li>
 
@@ -5659,8 +5677,8 @@ See [[cin]].</pre>
 <div modified="20150309131822209" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div modified="20150416144259777" title="$:/state/sidebar">
-<pre>yes</pre>
+<div modified="20150425122444528" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div modified="20150309131652877" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Filter</pre>
@@ -5677,7 +5695,7 @@ See [[cin]].</pre>
 <div modified="20150416100204620" title="$:/state/tag-manager/vector">
 <pre>open</pre>
 </div>
-<div list="[[spawn position]] #extension [[gl instance id]] [[fbo - frame buffer object]] supersampling EndPrimitive() EmitVertex() billboarding ofLerp() callback [[shader types]] [[geometry shader]] [[ray marching]] ofParameter&lt;type&gt; loadFromFile() disableArbTexture() [[shader overview]] [[fbm function (fractal Brownian motion)]] [[-&gt; pointer notation]] lights [[step or pulse functions]] [[noise intro]] [[Noise Workshop]] [[Glossary of Terms]]" title="$:/StoryList">
+<div list="[[function declarations]] [[function prototype]] [[function overloading]] Index [[Glossary of Terms]] [[Draft of 'functions']]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5694,11 +5712,11 @@ See [[cin]].</pre>
     }
 }</pre>
 </div>
-<div created="20150309131457885" modified="20150416144321243" title="$:/temp/NewTagName">
+<div created="20150309131457885" modified="20150425125828956" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150311130338374" modified="20150416134331942" title="$:/temp/search">
-<pre>fbo</pre>
+<div created="20150311130338374" modified="20150421091110325" title="$:/temp/search">
+<pre>if</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="A clean theme that emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.7">
 <pre>{
@@ -5850,11 +5868,11 @@ etc etc
 
 The compiler reads your source code and tries to make sense of it. It checks for syntax errors. If it can't make sense of anything, you'll get a [[compile-time error]].</pre>
 </div>
-<div created="20150309160605310" modified="20150309160830299" tags="chapters" title="Concepts">
-<pre>&lt;&lt;list-links [tag[concepts]]&gt;&gt;</pre>
-</div>
 <div color="#0096ff" created="20150309160928271" modified="20150309160928271" title="concepts">
 <pre></pre>
+</div>
+<div created="20150309160605310" modified="20150309160830299" tags="chapters" title="Concepts">
+<pre>&lt;&lt;list-links [tag[concepts]]&gt;&gt;</pre>
 </div>
 <div created="20150310095527156" modified="20150310095939638" tags="glossary" title="const">
 <pre>A variable whose value is fixed at declaration and cannot be changed by the programme.
@@ -5920,8 +5938,61 @@ See [[cin]].</pre>
 <div created="20150310122659295" modified="20150310122821759" tags="concepts glossary" title="defininition">
 <pre>A definitition is a declaration that sets aside memory for an [[object]].</pre>
 </div>
+<div created="20150421072341474" modified="20150421075313402" tags="glossary OpenGL" title="destination">
+<pre>The RGBA colour data from the incoming objects being drawn to the OpenGL buffer.</pre>
+</div>
 <div created="20150416120652594" modified="20150416120751902" tags="[[noise workshop]] unsure openFrameworks" title="disableArbTexture()">
 <pre>Disables something about texture coordinates, and gives you OpenGL-style coordinates between 0 and 1.</pre>
+</div>
+<div created="20150315132841327" draft.of="functions" draft.title="functions" modified="20150425123323676" tags="concepts glossary" title="Draft of 'functions'">
+<pre>A function is a named sequence of instructions for the computer. They are reusable, which is a very important concept. C++ has several built-in functions, the simplest of which are the basic mathematical operators *, /, + and -. Functions must be [[declared|function declarations]] (defined) before they can be called.
+
+All functions have:
+
+* a return type, i.e. [[int]] which specifies what kind of result, if any, the function will return when it's asked to be executed
+* a name, e.g. main
+* a parameter list enclosed in parentheses () and separated by commas, this can be empty
+* a function body enclosed in curly braces {}, listing the statements that the function is to perform
+
+Thus the minimal C++ programme is:
+
+``int main(){}``
+
+
+!!!Why bother with functions?
+* Maintainability - to change the function everywhere in the code, you can just change the definition
+* Makes computation logically separate
+* Readability - makes code clearer by naming the computations
+* Code reuse - he function is reusable in more than one place in the programme, or elsewhere
+* Eases testing
+
+Each function must have:
+
+``type identifier (parameter-list) function-body``
+
+# return type
+# name
+# parameter list (list of arguments with type (some functions have no arguments))
+# body of expressions
+
+Up to one value may be returned by the function, it must be the same type as the return type.
+Functions that return nothing have type ''void''. NB variables cannot have type void.
+
+``void write_sorry()
+{
+    cout &lt;&lt; &quot;sorry\n&quot;;
+}``
+
+!!!Return values
+Return statements don't need to be at the end, as the function returns as soon as a return statement is executed.
+
+!!!Function declarations
+Often it's not necessary to look at the function body, we're more concerned with how to call the function.
+
+``int square(int);  //declaration of square``
+``double sqrt(double)  // declaration of sqrt``
+
+Note the use of semicolons instead of the function body. To use the function, just #include or write it's declaration.</pre>
 </div>
 <div created="20150416132109717" modified="20150416132157421" tags="concepts glossary unsure OpenGL" title="EmitVertex()">
 <pre>We've done processing a vertex and it's now sent to the next stage in the pipeline.</pre>
@@ -5984,7 +6055,56 @@ In this, the ``cin &gt;&gt; temp`` is a boolean so can be used as the condition.
 
 A fragment shader operates once per pixel.</pre>
 </div>
-<div created="20150315132841327" modified="20150315151915988" tags="concepts glossary" title="function">
+<div created="20150425123944062" modified="20150425125802438" tags="concepts glossary" title="function declarations">
+<pre>As functions must be declared before they can be called, you can either:
+
+# Reorder function declarations
+# Use a [[function prototype]], which informs the compiler you'll implement it later
+
+!!!Function declaration syntax
+
+``int raiseToPower(int base, int exponent) // function signature
+{  // function body
+    int result = 1;
+    for (int i = 0; i &lt; exponent; i = i + 1) {
+        result = result * base;
+    }
+    return result;
+}``
+
+</pre>
+</div>
+<div created="20150425122452705" modified="20150425123142979" tags="concepts glossary" title="function overloading">
+<pre>You can have many functions with the same name but with different arguments. This is seen often in openFrameworks.
+
+The function with arguments that match the invocation will be called.
+
+Consider:
+
+``void printOnNewLine(int x)
+{
+    cout &lt;&lt; &quot;Integer: &quot; &lt;&lt; x &lt;&lt; endl;
+}
+
+void printOnNewLine(char *x)
+{
+    cout &lt;&lt; &quot;String: &quot; &lt;&lt; x &lt;&lt; endl;
+}``
+
+In action:
+
+``printOnNewLine(3)`` prints &quot;Integer: 3&quot;
+
+``printOnNewLine(&quot;hello&quot;)`` prints &quot;String: hello&quot;
+
+</pre>
+</div>
+<div created="20150425125823345" modified="20150425125931331" tags="concepts glossary unsure" title="function prototype">
+<pre>Function prototypes should match the signature of the method, though argument names don’t matter.
+
+Function prototypes are generally put into separate header files, this separates specification of the function from its implementation.</pre>
+</div>
+<div created="20150315132841327" modified="20150425122448766" tags="concepts glossary" title="functions">
 <pre>A function is a named sequence of instructions for the computer. They are reusable, which is a very important concept. C++ has several built-in functions, the simplest of which are the basic mathematical operators *, /, + and -.
 
 All functions have:
@@ -6000,9 +6120,10 @@ Thus the minimal C++ programme is:
 
 
 !!!Why bother with functions?
+* Maintainability - to change the function everywhere in the code, you can just change the definition
 * Makes computation logically separate
-* Makes code clearer by naming the computations
-* The function is reusable in more than one place in the programme
+* Readability - makes code clearer by naming the computations
+* Code reuse - he function is reusable in more than one place in the programme, or elsewhere
 * Eases testing
 
 Each function must have:
@@ -6014,12 +6135,16 @@ Each function must have:
 # parameter list (list of arguments with type (some functions have no arguments))
 # body of expressions
 
-Functions that return nothing have type ''void''.
+Up to one value may be returned by the function, it must be the same type as the return type.
+Functions that return nothing have type ''void''. NB variables cannot have type void.
 
 ``void write_sorry()
 {
     cout &lt;&lt; &quot;sorry\n&quot;;
 }``
+
+!!!Return values
+Return statements don't need to be at the end, as the function returns as soon as a return statement is executed.
 
 !!!Function declarations
 Often it's not necessary to look at the function body, we're more concerned with how to call the function.
@@ -6035,6 +6160,23 @@ Note the use of semicolons instead of the function body. To use the function, ju
 When you're working with lines, you need to give the starting and end points into the shader.
 
 Geometry shaders are quite fragile so it's hard to get them working.</pre>
+</div>
+<div created="20150421074300465" modified="20150421075209168" tags="concepts glossary" title="getters and setters">
+<pre>Allow you to protect your data, used frequently when creating [[classes]]. For each variable, a ''get'' method will return its value and a ''set'' method will set the value.
+
+By convention, getters usually start off with get and setters by set. The getters can use const to state that the method will not change any value of the class.
+
+Getters and setters are usually public and the variables are made private.
+
+``//Getters
+int getHealth() const {
+    return health;
+}
+
+//Setters
+void setHealth(int h) {
+    health = h;
+}</pre>
 </div>
 <div created="20150416144305941" modified="20150416144358329" tags="concepts OpenGL openFrameworks unsure glossary" title="gl instance id">
 <pre>used to label instances of objects </pre>
@@ -6057,6 +6199,34 @@ in vec4 position;
 void main(){
     gl_Position = modelViewProjectionMatrix * position;
 }``</pre>
+</div>
+<div created="20150421071745996" modified="20150421075250051" tags="glossary OpenGL unsure" title="glBlendFunc()">
+<pre>Tells the graphics card how to display two objects together, the [[source]] and the [[destination]].
+
+``glBlenFlnc(GLenum sfactor, GLenum dfactor);``
+
+Blending is initially disabled. Use glEnable and glDisable with argument GL_BLEND to enable and disable blending.
+
+Some common GLenum parameters which are replaced by factors at compilation time.
+
+*GL_ZERO
+**Tells the graphics card to set all the color data to which this flag is applied, either the source or the destination, to zero.
+*GL_ONE
+**Tells the graphics card to set this data to full.
+*GL_DST_COLOR
+**Tells the graphics card to blend the destination color data into the incoming color data.
+*GL_ONE_MINUS_DST_COLOR
+**Tells the graphics card to invert the destination color data by subtracting it from 1 and returning that value.
+*GL_SRC_ALPHA
+**Tells the graphics card to use the source alpha values to determine which of the destination colors will appear.
+*GL_ONE_MINUS_SRC_ALPHA
+**Tells the graphics card to subtract the invert all the colors depending on the strength of the source's alpha value.
+*GL_DST_ALPHA
+**Uses only the alpha values of the destination data.
+*GL_ONE_MINUS_DST_ALPHA
+**Uses the values of the destination minus 1.
+*GL_SRC_ALPHA_SATURATE
+**Takes the minimum value of each the two alpha values compared.</pre>
 </div>
 <div color="#ff9300" created="20150309135624165" modified="20150309135654410" title="glossary">
 <pre></pre>
@@ -6111,14 +6281,14 @@ Given the coordinates [x,y,z]:
 
 See also [[Tom Dalling's explanation|http://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/]]</pre>
 </div>
-<div created="20150314163918704" modified="20150314182943460" tags="concepts glossary" title="if-statement">
+<div created="20150314163918704" modified="20150421091457632" tags="concepts glossary" title="if-statement">
 <pre>The use of braces is optional but Vincent and Google reckon that this is more legible. It's also congruent to JavaScript, which is nice.
 
 ``if (condition) {
     statement;
 } else if (condition) {
     statement;
-} else
+} else {
     statement;
 }``</pre>
 </div>
@@ -6292,6 +6462,18 @@ If you only have one point and you need a new noise value, you can use an offset
 </div>
 <div created="20150416080353894" modified="20150416080449966" tags="chapters" title="Noise Workshop">
 <pre></pre>
+</div>
+<div created="20150421093624649" modified="20150421094230815" tags="glossary Xcode" title="non-ASCII characters are not allowed outside of literals and identifiers">
+<pre>This error means that you have some non-ASCII text in your code. In the first instance where I came across this error, the error is listed against the line two before the one with the problem.
+
+This most often occurs when you've copied and pasted some text from elsewhere, like a pdf document. Using Editor -&gt; Display Invisibles can help track down hidden characters.
+
+This can be difficult to debug because the characters often look the same. Pay particular attention to single and double quotes and dashes.
+
+For example:
+
+``-- // ASCII dashes
+–– // Non ASCII dashes``</pre>
 </div>
 <div created="20150410152458935" modified="20150410152907630" tags="glossary concepts OpenGL" title="normal">
 <pre>A normal is the direction in which a triangle or other 3D face is oriented. Usually in computer graphics, faces are only rendered from one side. The normal is perpendicular to the plane of all three vertices in the triangle.
@@ -6476,11 +6658,11 @@ To be efficient, the ray marching is done in conjunction with a bounding box, so
 See the Ignio clouds shader on ShaderToy for an example of ray marching.
 </pre>
 </div>
-<div color="#ff2600" created="20150309135659449" modified="20150309135659449" title="rules">
-<pre></pre>
-</div>
 <div created="20150317220135204" modified="20150317220155015" tags="chapters" title="Rules">
 <pre>&lt;&lt;list-links [tag[rules]]&gt;&gt;</pre>
+</div>
+<div color="#ff2600" created="20150309135659449" modified="20150309135659449" title="rules">
+<pre></pre>
 </div>
 <div created="20150314162310074" modified="20150314182749150" tags="concepts glossary" title="selection">
 <pre>Making a selection in C++ usually requires:
@@ -6611,6 +6793,9 @@ Shaders come in different [[types|shader types]]:
 <pre>For a vector v:
 
 ``sort(v);`` sorts the elements stored in the vector into rank order so that v[0] is the smallest and v[v.size()-1] is the largest.</pre>
+</div>
+<div created="20150421072209787" modified="20150421075305250" tags="glossary OpenGL" title="source">
+<pre>The RGBA colour data from the objects already in the OpenGL buffer.</pre>
 </div>
 <div created="20150416145817889" modified="20150416150616690" tags="concepts OpenGL openFrameworks unsure glossary" title="spawn position">
 <pre>You can use another texture to provide spawn positions for a particle system.</pre>
